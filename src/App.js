@@ -5,27 +5,13 @@ import {useState} from 'react'
 import AddTask from './components/AddTask'
 
 function App() {
-  const [tasks,setTasks] = useState([
-    {
-        id : 1,
-        text : 'Hi',
-        day :'Feb 22nd at 2:30pm',
-        reminder : true
-    },
-    {
-        id : 2,
-        text : 'Hello',
-        day :'Feb 23rd at 2:30pm',
-        reminder : false
-    },
-    {
-        id : 3,
-        text : 'Bye',
-        day :'Feb 24th at 2:30pm',
-        reminder : true
-    }])
-    const addTask = () =>{
-
+  const [showAddTask, setShowAddTask] = useState(false)
+  const [tasks,setTasks] = useState([])
+    
+    const addTask = (task) =>{
+      const id = Math.floor(Math.random()*10000)+1
+      const newTask = {id, ...task}
+      setTasks([...tasks, newTask])
     }
     //Delete task
     const deleteTask = (id) =>{
@@ -38,8 +24,8 @@ function App() {
     }
   return (
     <div className="container" >
-      <Header/>
-      <AddTask></AddTask>
+      <Header onAdd={()=>setShowAddTask(!showAddTask)} showAddTask={showAddTask}/>
+      {showAddTask  && <AddTask onAdd={addTask}/>}
       {tasks.length >0 ?
       (<Tasks 
         tasks={tasks} 
