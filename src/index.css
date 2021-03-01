@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  
+  color: #e7e3e3;
 }
 
 .container {
@@ -19,7 +19,7 @@ body {
   border: 1px solid steelblue;
   padding: 30px;
   border-radius: 5px;
-  background-color: #394867;
+  background-color: #14274e;
   
 }
 
@@ -35,7 +35,7 @@ body {
 
 .btn {
   display: inline-block;
-  background: #000;
+  background: rgb(9, 8, 54);
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -45,6 +45,10 @@ body {
   text-decoration: none;
   font-size: 15px;
   font-family: inherit;
+  
+}
+.btn:hover {
+  background-color:#3e80be;
 }
 
 .btn:focus {
@@ -61,7 +65,7 @@ body {
 }
 
 .task {
-  background: #f4f4f4;
+  background: #9ba4b4;
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
