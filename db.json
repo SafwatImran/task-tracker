@@ -5,6 +5,12 @@
       "day": "asdasd",
       "reminder": false,
       "id": 1
+    },
+    {
+      "text": "hi ",
+      "day": "223",
+      "reminder": false,
+      "id": 2
     }
   ]
 }
